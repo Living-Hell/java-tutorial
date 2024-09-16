@@ -117,7 +117,62 @@ public class JavaVariables {
         boolean boolVar = true;
         System.out.println(boolVar);
 
+        /* Types of conversions (Typecasting): */
 
+        /* Widening/Automatic Conversion */
+        // From lower data type to higher data type, it does automatic conversion and its called widening conversion
+         int i = 10;
+         double d = i;
+         System.out.println(d); //prints 10.0
+
+
+        /* DownCasting/ Explicit Casting */
+        // From higher data type to lower data type, conversion needs to be done explicitly or manually
+        double d1 = 10.5;
+        int i1 = (int) d1;
+        System.out.println(i1); //prints 10
+
+        float i2 = 10.2f;
+//      short s2 = i2; This throws error
+        short s2 = (short) i2;
+        System.out.println(s2); // prints 10
+
+        int v3 = 128;
+        byte b1 = (byte) v3;
+        System.out.println(b1); // prints -128
+
+        v3 = 129;
+        b1 = (byte) v3;
+        System.out.println(b1); // prints -127
+
+        v3 = -129;
+        b1 = (byte) v3;
+        System.out.println(b1); // prints 127
+
+        //This is because the range of byte is -128 to 127
+
+        /* Promotion */
+        byte b2 = 127;
+        byte b3 = 1;
+//      byte b4 = b2 + b3; This throws error since (b2 + b3) is promoted internally in the expression to int
+//      and now stores value 128 which is out of the range of byte so, we need to change its type accordingly
+        int b4 = b2 + b3;
+        System.out.println(b4); // prints 128
+
+        // or we can do explicit type casting
+        byte b5 = (byte) (b2 + b3);
+        System.out.println(b5); // prints -128
+
+        //In promotion, if one of the datatype in the expression is higher, all the datatypes are converted
+        // to that higher data type and then evaluated accordingly.
+        int i3 = 24;
+        double d2 = 20d;
+//      int i4 = i3 + d2; this throws error since the double is the higher data type and the expression is evaluated
+//      as double after converting i3 to double
+        int i4 = (int) (i3 + d2);
+        System.out.println(i4); // prints 44
+        double d3 = i3 + d2;
+        System.out.println(d3); // prints 44.0
 
     }
 }
