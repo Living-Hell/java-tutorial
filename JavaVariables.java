@@ -174,5 +174,35 @@ public class JavaVariables {
         double d3 = i3 + d2;
         System.out.println(d3); // prints 44.0
 
+
+        /* Kind of variables */
+
+        // Member variables / Instance
+        // Local variables
+        // Static variables / Class variables
+        // Constructor
+        // Parameterised Constructor
+        // Method parameter
+
+        /*
+        public class JavaVariables {
+            int memberVariable = 10; // member variable
+            static int staticVariable = 10; // static variable
+
+            JavaVariables() { } // constructor
+            JavaVariables(int i) { } // parameterised constructor
+            public static void main(String[] args) {
+                int localVariable = 10; // local variable
+            }
+            public int methodParameter(int i) { return i; } // method parameter
+        }
+        */
+
+        // Once the method is finished, the local variables are destroyed
+        // Scope of the local variables is within the method
+
+        // To access the static/class variables, we need to use the class name
+        // Eg. JavaVariables.staticVariable
+
     }
 }
